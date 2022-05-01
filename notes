@@ -1,0 +1,78 @@
+faire un module qui vérifie que les prérequis sont en place
+- présence de la suite aicrack-ng avec possibilité de l'installer sinon
+- carte qui peut etre en monitoring (la passer puis la repasser et networkmanager / set iplink up)
+
+    try:
+        #networks_list.append(subprocess.run(['sudo', 'airodump-ng', mon_device], timeout=5))
+        networks_list.append(subprocess.run(['sudo', 'airodump-ng', mon_device]
+        , universal_newlines=True, stdout=PIPE, stderr=PIPE
+        #, timeout=2).stdout)
+        , timeout=2))
+    except subprocess.TimeoutExpired:
+        print("Network list : \n", networks_list)
+
+
+
+- adresse mac : randomiser avant de commencer
+
+
+
+
+
+######      Bienvenue sur SMEETA DRONE ATTACK      ######
+
+1 : Repérer les cibles potentielles
+2 : Attaque automatique de toutes cibles à proximité
+3 : Options
+4 : Quitter
+
+
+(Choix 1)
+
+######      Analyse des cibles environnantes      ######
+
+Vérification des préquis........................... [OK]
+
+Détection de l'interface WiFi à utiliser............[OK]
+=====> wlan0
+
+Détection des réseaux WiFi à proximitié.............[OK]
+====> 15 réseaux WiFi détectés
+
+Détection de cibles dans ces réseaux................[OK]
+=====> 10 cibles potentielles détectées dans 3 réseaux
+
+
+
+######      Choix de la cible      ######
+
+1 : Parrot AR Drone 2 dans réseau StarDrone2 (Signal : 24/60)
+2 : DJI Phantom 2 dans réseau DJINetwork (Signal : 24/60)
+
+(Choix 1)
+
+
+
+######      Choix du type d'attaque     ######
+
+Cible sélectionnée : Parrot AR Drone 2
+
+1 : Brouillage
+2 : Prendre le controle
+3 : Falsifier la position GPS
+4 : Exfiltrer des données
+5 : Injecter un malware
+
+(Choix 2)
+
+
+
+######      Tentative d'attaque     ######
+
+Type d'attaque sélectionné : Prise de contrôle
+
+
+
+
+
+
