@@ -16,10 +16,11 @@ import sys
 import time
 
 import src.wifi.wifi_availables_nw as nw
-import src.views.targeted_wifi_nw as tgt
+import src.views.detect_potential_targets as tgt
 """ has to be the last import because of a bug in 'click' external lib """
 from src.views.view_tools import *
 
+import src.views.home_view as h
 
 
 # the menus list
@@ -28,7 +29,11 @@ menus = ["Detect potential targets", "Settings", "Quit"]
 
 def main():
 
+    view = h.HomeView()
+    view.display()
+
     """ Main function. """
+    """
     new_page()
     # menu selection
     value = choose_menu(menus)
@@ -40,6 +45,8 @@ def main():
 
         # detect targets : networks hosted by drones
         tgt.main()
+
+    """
 
 if __name__ == "__main__":
     main()
